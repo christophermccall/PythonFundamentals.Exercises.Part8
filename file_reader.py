@@ -11,7 +11,7 @@ def reckless_file_reader(file_path: str) -> None:
 
 
 # When an unhandled exception occurs, the application will be terminated.
-# We can avoid the this by wrapping the code in a try statement.
+# We can avoid this by wrapping the code in a try statement.
 # This next function will show you what not to do.
 # Seriously, NEVER do this. This is known as eating an exceptions.
 # This anti-pattern will hide bugs in your code and cause endless headache.
