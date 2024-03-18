@@ -7,4 +7,36 @@ how's it going?
 how's it going?
 how's it going?
 how's it going?
-how's it going?
+
+./test_file_reader.py
+./tree.py
+./new_file.txt
+./.DS_Store
+./test/test_run1.txt
+./test/test_run2.txt
+./test/test_run.txt
+./file_reader.py
+./my_awesome_file.txt
+./README.md
+./.gitignore
+./new_file_reader.py
+./.git/ORIG_HEAD
+./.git/config
+./.git/objects
+./.git/HEAD
+./.git/info
+./.git/logs
+./.git/description
+./.git/hooks
+./.git/refs
+./.git/index
+./.git/packed-refs
+./.git/COMMIT_EDITMSG
+./locked_out_file.txt
+./.idea/inspectionProfiles
+./.idea/PythonFundamentals.Exercises.Part8.iml
+./.idea/vcs.xml
+./.idea/.gitignore
+./.idea/workspace.xml
+./.idea/modules.xml
+./.idea/misc.xml
