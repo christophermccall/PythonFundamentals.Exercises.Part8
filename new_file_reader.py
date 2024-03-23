@@ -27,15 +27,16 @@ def name_writer(path,message):
         logging.error(e)
 
 
-def wrong_name_reader():
-    try:
-        file = open("is_this_new_file?.py")
-        for line in file:
-            print(f"{line}", end="")
-        file.close()
-    except FileNotFoundError as e:
-        print("that didn't work,man")
-        logging.error(e)
+# def wrong_name_reader():
+#     try:
+#         file = open("is_this_new_file?.py")
+#         for line in file:
+#             print(f"{line}", end="")
+#         file.close()
+#     except FileNotFoundError:
+#
+
+
 
 
 #right_name_reader()

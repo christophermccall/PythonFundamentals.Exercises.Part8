@@ -4,10 +4,11 @@ import logging
 # This function will attempt to open a file and process it.
 # What could go wrong?
 def reckless_file_reader(file_path: str) -> None:
-    file = open(file_path)
-    for line in file:
-        print(f"{line}", end="")
-    file.close()
+        file = open(file_path)
+        for line in file:
+            print(f"{line}", end="")
+        file.close()
+
 
 
 # When an unhandled exception occurs, the application will be terminated.
@@ -18,8 +19,9 @@ def reckless_file_reader(file_path: str) -> None:
 def quick_way_to_get_fired(file_path: str) -> None:
     try:
         reckless_file_reader(file_path)
-    except:
-        pass
+    except PermissionError:
+        "cant access file"
+
 
 
 # Once we know our code has the potential to raise exceptions, we can handle the exception properly like the code below.
@@ -29,8 +31,10 @@ def single_exception_handling_reader(file_path: str) -> None:
     try:
         reckless_file_reader(file_path)
     except FileNotFoundError as e:
-        print("Could not find the file with the provided path.")
+        print("No such file or directory: 'file_that_does_not_exist.txt'")
         logging.error(e)
+
+
 
 
 # We can handle as many different types of exceptions as we need to.
@@ -38,11 +42,12 @@ def multiple_exception_handling_reader(file_path: str) -> None:
     try:
         reckless_file_reader(file_path)
     except FileNotFoundError as e:
+        logging.error(e)
         print("Could not find the file with the provided path.")
-        logging.error(e)
     except PermissionError as e:
-        print("Unable to read the file due to a permission issue.")
         logging.error(e)
+        print("Permission denied: 'locked_out_file.txt'")
+
 
 
 # Sometimes we intend to handle different exceptions in the same way.
